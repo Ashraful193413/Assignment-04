@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" /> -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,14 +15,77 @@
     
     <title>Document</title>
     <style>
-        *{
-            font-family: "Outfit", sans-serif;
+        *body{
+            font-family: "Geist", sans-serif;
         }
     </style>
 </head>
-<body>
-    <h1 class="">Bangladesh</h1>
-    <button class="btn btn-soft">Click me</button>
+<body class="w-11/12 mx-auto">
+    <header class="my-8">
+        <h1 class="text-3xl font-bold text-[#002B70] pb-4">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="bg-slate-100 p-3 rounded">
+                <p>Total</p>
+                <p id="total-count" class="text-[#002B70] font-bold">0</p>
+            </div>
+
+            <div class="bg-slate-100 p-3 rounded">
+                <p>Interview</p>
+                <p id="interview-count" class="text-green-700 font-bold">0</p>
+            </div>
+
+            <div class="bg-slate-100 p-3 rounded">
+                <p>Rejected</p>
+                <p id="rejected-count" class="text-red-700 font-bold">0</p>
+            </div>
+        </div>
+
+        <hr class="mt-4">
+    </header>
+
+    <main>
+        <div class="mb-8">
+                <h3 class="text-xl font-bold text-[#002B70] pb-4">Available Jobs</h3>
+
+                <button class="bg-[#3B82F6] text-white py-1 px-7 rounded">All</button>
+                <button class="bg-slate-100 py-1 px-7 rounded">Interview</button>
+                <button class="bg-slate-100 py-1 px-7 rounded">Rejected</button>
+            </div>
+
+        <section id="allCards">
+            <!-- card 1 -->
+             <div class="card bg-slate-100 flex justify-between">
+                <div class="left space-y-4 p-3 rounded">
+                    <div>
+                        <p class="text-xl font-semibold text-[#002B70]">Mobile First Crop</p>
+                        <p class="text-[#323B49]">React Native Developer</p>
+                    </div>
+
+                    <div>
+                        <p class="text-[#323B49]">Remote • Full-time • $130,000 - $175,000</p>
+                    </div>
+
+                    <div>
+                        <span class="text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
+                        <p class="text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    </div>
+            
+                    <div>
+                        <button class="mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
+                        <button class="border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <button class="mt-5 mr-5 p-2 bg-white rounded-full"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+             </div>
+
+        </section>
+
+
+    </main>
+    
 
 
 
