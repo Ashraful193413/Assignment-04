@@ -47,33 +47,37 @@
         <div class="mb-8">
                 <h3 class="text-xl font-bold text-[#002B70] pb-4">Available Jobs</h3>
 
-                <button class="bg-[#3B82F6] text-white py-1 px-7 rounded">All</button>
-                <button class="bg-slate-100 py-1 px-7 rounded">Interview</button>
-                <button class="bg-slate-100 py-1 px-7 rounded">Rejected</button>
+                <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="bg-[#3B82F6] text-white py-1 px-7 rounded">All</button>
+                <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="bg-slate-100 text-black py-1 px-7 rounded">Interview</button>
+                <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="bg-slate-100 text-black py-1 px-7 rounded">Rejected</button>
             </div>
 
-        <section id="allCards space-y-4">
-           <div class="space-y-9">
+            <!-- filtered card  -->
+             <section id="filter-section" class="hidden">
+
+             </section>
+
+        <section id="allCards" class="space-y-9">
              <!-- card 1 -->
              <div class="card bg-slate-100 flex justify-between rounded">
                 <div class="left space-y-4 p-3 rounded">
                     <div>
-                        <p class="text-xl font-semibold text-[#002B70]">Mobile First Crop</p>
-                        <p class="text-[#323B49]">React Native Developer</p>
+                        <p class="mobile-first text-xl font-semibold text-[#002B70]">Mobile First Crop</p>
+                        <p class="react-developer text-[#323B49]">React Native Developer</p>
                     </div>
 
                     <div>
-                        <p class="text-[#323B49]">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="salary-details text-[#323B49]">Remote • Full-time • $130,000 - $175,000</p>
                     </div>
 
                     <div>
-                        <span class="text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
-                        <p class="text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <span class="status text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
+                        <p class="job-details text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     </div>
             
                     <div>
-                        <button class="mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
-                        <button class="border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
+                        <button class="interview-btn mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
+                        <button class="rejected-btn border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
                     </div>
                 </div>
 
@@ -86,22 +90,22 @@
              <div class="card bg-slate-100 flex justify-between rounded">
                 <div class="left space-y-4 p-3 rounded">
                     <div>
-                        <p class="text-xl font-semibold text-[#002B70]">Mobile First Crop</p>
-                        <p class="text-[#323B49]">React Native Developer</p>
+                        <p class="mobile-first text-xl font-semibold text-[#002B70]">WebFlow Agency</p>
+                        <p class="react-developer text-[#323B49]">Web Designer & Developer</p>
                     </div>
 
                     <div>
-                        <p class="text-[#323B49]">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="salary-details text-[#323B49]">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
                     </div>
 
                     <div>
-                        <span class="text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
-                        <p class="text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <span class="status text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
+                        <p class="job-details text-[#323B49]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                     </div>
             
                     <div>
-                        <button class="mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
-                        <button class="border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
+                        <button class="interview-btn mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
+                        <button class="rejected-btn border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
                     </div>
                 </div>
 
@@ -114,22 +118,22 @@
              <div class="card bg-slate-100 flex justify-between rounded">
                 <div class="left space-y-4 p-3 rounded">
                     <div>
-                        <p class="text-xl font-semibold text-[#002B70]">Mobile First Crop</p>
-                        <p class="text-[#323B49]">React Native Developer</p>
+                        <p class="mobile-first text-xl font-semibold text-[#002B70]">Garden Center</p>
+                        <p class="react-developer text-[#323B49]">Computer Operator</p>
                     </div>
 
                     <div>
-                        <p class="text-[#323B49]">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="salary-details text-[#323B49]">Remote • Full-time • $95,000 - $115,000</p>
                     </div>
 
                     <div>
-                        <span class="text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
-                        <p class="text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <span class="status text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
+                        <p class="job-details text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     </div>
             
                     <div>
-                        <button class="mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
-                        <button class="border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
+                        <button class="interview-btn mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
+                        <button class="rejected-btn border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
                     </div>
                 </div>
 
@@ -142,22 +146,22 @@
              <div class="card bg-slate-100 flex justify-between rounded">
                 <div class="left space-y-4 p-3 rounded">
                     <div>
-                        <p class="text-xl font-semibold text-[#002B70]">Mobile First Crop</p>
-                        <p class="text-[#323B49]">React Native Developer</p>
+                        <p class="mobile-first text-xl font-semibold text-[#002B70]">Graphics It BD</p>
+                        <p class="react-developer text-[#323B49]">Jr. Graphics Designer</p>
                     </div>
 
                     <div>
-                        <p class="text-[#323B49]">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="salary-details text-[#323B49]">Full-time • $110,000 - $145,000</p>
                     </div>
 
                     <div>
-                        <span class="text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
-                        <p class="text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <span class="status text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
+                        <p class="job-details text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     </div>
             
                     <div>
-                        <button class="mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
-                        <button class="border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
+                        <button class="interview-btn mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
+                        <button class="rejected-btn border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
                     </div>
                 </div>
 
@@ -170,22 +174,22 @@
              <div class="card bg-slate-100 flex justify-between rounded">
                 <div class="left space-y-4 p-3 rounded">
                     <div>
-                        <p class="text-xl font-semibold text-[#002B70]">Mobile First Crop</p>
-                        <p class="text-[#323B49]">React Native Developer</p>
+                        <p class="mobile-first text-xl font-semibold text-[#002B70]">Rezaur Rahman & Associate</p>
+                        <p class="react-developer text-[#323B49]">Management Trainee Officer</p>
                     </div>
 
                     <div>
-                        <p class="text-[#323B49]">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="salary-details text-[#323B49]">Remote • Full-time • $130,000 - $175,000</p>
                     </div>
 
                     <div>
-                        <span class="text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
-                        <p class="text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <span class="status text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
+                        <p class="job-details text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     </div>
             
                     <div>
-                        <button class="mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
-                        <button class="border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
+                        <button class="interview-btn mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
+                        <button class="rejected-btn border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
                     </div>
                 </div>
 
@@ -198,22 +202,22 @@
              <div class="card bg-slate-100 flex justify-between rounded">
                 <div class="left space-y-4 p-3 rounded">
                     <div>
-                        <p class="text-xl font-semibold text-[#002B70]">Mobile First Crop</p>
-                        <p class="text-[#323B49]">React Native Developer</p>
+                        <p class="mobile-first text-xl font-semibold text-[#002B70]">Xuri Industries Ltd</p>
+                        <p class="react-developer text-[#323B49]">Chaines Translator</p>
                     </div>
 
                     <div>
-                        <p class="text-[#323B49]">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="salary-details text-[#323B49]">Full-time • $120,000 - $155,000</p>
                     </div>
 
                     <div>
-                        <span class="text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
-                        <p class="text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <span class="status text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
+                        <p class="job-details text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     </div>
             
                     <div>
-                        <button class="mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
-                        <button class="border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
+                        <button class="interview-btn mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
+                        <button class="rejected-btn border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
                     </div>
                 </div>
 
@@ -226,22 +230,22 @@
              <div class="card bg-slate-100 flex justify-between rounded">
                 <div class="left space-y-4 p-3 rounded">
                     <div>
-                        <p class="text-xl font-semibold text-[#002B70]">Mobile First Crop</p>
-                        <p class="text-[#323B49]">React Native Developer</p>
+                        <p class="mobile-first text-xl font-semibold text-[#002B70]">Geli Industries Ltd</p>
+                        <p class="react-developer text-[#323B49]">Sr. Commercial Officer</p>
                     </div>
 
                     <div>
-                        <p class="text-[#323B49]">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="salary-details text-[#323B49]">Remote • Full-time • $110,000 - $145,000</p>
                     </div>
 
                     <div>
-                        <span class="text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
-                        <p class="text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <span class="status text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
+                        <p class="job-details text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     </div>
             
                     <div>
-                        <button class="mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
-                        <button class="border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
+                        <button class="interview-btn mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
+                        <button class="rejected-btn border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
                     </div>
                 </div>
 
@@ -254,22 +258,22 @@
              <div class="card bg-slate-100 flex justify-between rounded">
                 <div class="left space-y-4 p-3 rounded">
                     <div>
-                        <p class="text-xl font-semibold text-[#002B70]">Mobile First Crop</p>
-                        <p class="text-[#323B49]">React Native Developer</p>
+                        <p class="mobile-first text-xl font-semibold text-[#002B70]">Eduka Technologist Ltd</p>
+                        <p class="react-developer text-[#323B49]">Fornt-End Developer</p>
                     </div>
 
                     <div>
-                        <p class="text-[#323B49]">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="salary-details text-[#323B49]">Remote • Full-time • $140,000 - $165,000</p>
                     </div>
 
                     <div>
-                        <span class="text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
-                        <p class="text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                        <span class="status text-[#002B70] bg-[#DBE8FF] p-1 rounded">Not Applied</span>
+                        <p class="job-details text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     </div>
             
                     <div>
-                        <button class="mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
-                        <button class="border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
+                        <button class="interview-btn mr-3 border-green-700 border-2 rounded px-2 text-green-700">INTERVIEW</button>
+                        <button class="rejected-btn border-2 rounded px-2 border-red-700 text-red-700">REJECTED</button>
                     </div>
                 </div>
 
@@ -277,7 +281,6 @@
                     <button class="mt-5 mr-5 p-2 bg-white rounded-full"><i class="fa-regular fa-trash-can"></i></button>
                 </div>
              </div>
-           </div>
         </section>
     </main>
     
