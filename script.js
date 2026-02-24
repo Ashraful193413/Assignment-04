@@ -6,6 +6,9 @@ let totalCount = document.getElementById('total-count');
 let totalInterview = document.getElementById('interview-count');
 let totalReject = document.getElementById('rejected-count');
 
+let totalJobCount = document.getElementById('total-job-count');
+let currentCount = document.getElementById('current-count');
+
 const allFilterBtn = document.getElementById('all-filter-btn');
 const interviewFilterBtn = document.getElementById('interview-filter-btn');
 const rejectedFilterBtn = document.getElementById('rejected-filter-btn');
@@ -18,6 +21,9 @@ function calculateCount(){
     totalCount.innerText = allCardSection.children.length;
     totalInterview.innerText = interviewList.length;
     totalReject.innerText = rejectedList.length;
+
+    totalJobCount.innerText = allCardSection.children.length;
+    currentCount.innerText = interviewList.length + rejectedList.length;
 }
 calculateCount()
 

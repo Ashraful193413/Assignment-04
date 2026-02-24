@@ -45,12 +45,20 @@
     </header>
 
     <main>
-        <div class="mb-8">
+        <div class="mb-8 space-y-5">
                 <div class="flex justify-between">
-                    <div><h3 class="text-xl font-bold text-[#002B70] pb-4">Available Jobs</h3></div>
-                    <div><p class="text-xl font-bold text-[#002B70] mr-5">8 jobs</p></div>
-                </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#002B70]">Available Jobs</h3>
+                    </div>
 
+                    <div class="flex items-center gap-2 text-lg mr-5">
+                        <span id="current-count">0</span>
+                        <span>of</span>
+                        <span id="total-job-count" class="font-bold text-[#002B70]">0</span>
+                        <span>Jobs</span>
+                    </div>
+
+            </div>
                 <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="bg-[#3B82F6] text-white py-1 px-7 rounded">All</button>
                 <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="bg-slate-100 text-black py-1 px-7 rounded">Interview</button>
                 <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="bg-slate-100 text-black py-1 px-7 rounded">Rejected</button>
